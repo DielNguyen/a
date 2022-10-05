@@ -28,8 +28,6 @@ class PostRemoteDatasourceIplm implements PostRemoteDataSource {
       "Content-Type": "application/json",
     });
 
-    print('RESPONSE =>>>> ${response.body}');
-
     if (response.statusCode == 200) {
       final List decodeJson = json.decode(response.body) as List;
       final List<PostModel> postModels = decodeJson

@@ -43,7 +43,7 @@ class TBHeader extends AppBar {
           systemOverlayStyle: const SystemUiOverlayStyle(
             statusBarColor: AppColors.Netral_1,
             statusBarBrightness: Brightness.light,
-            statusBarIconBrightness: Brightness.dark,
+            statusBarIconBrightness: Brightness.light,
           ),
           elevation: 0,
           centerTitle: true,

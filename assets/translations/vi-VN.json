@@ -5,13 +5,10 @@
   "login": {
     "title": "Đăng nhập",
     "content": "Nhập email hoặc số điện thoại và mật khẩu để đăng nhập hoặc,\ntạo tài khoản mới?",
-    "hint_email_phone": "Your email or phone number",
-    "hint_password": "Your password"
+    "hint_email_phone": "Email hoặc số điện thoại",
+    "hint_password": "Mật khẩu"
   },
   "forgot_password": {
-    "text": "Forgot password?"
-  },
-  "title": "Titles",
-  "app_local_demo": "Application localization example!",
-  "demo_details": "This is a sample project to change the language with a drop down menu of languages."
+    "text": "Quên mật khẩu?"
+  }
 }

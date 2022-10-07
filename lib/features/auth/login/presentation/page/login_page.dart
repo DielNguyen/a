@@ -7,7 +7,9 @@ import 'package:a/core/styles/app_colors.dart';
 import 'package:a/core/styles/styles.dart';
 import 'package:a/core/widgets/dismiss_keyboard_widget.dart';
 import 'package:a/resources/resources.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:restart_app/restart_app.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -29,6 +31,22 @@ class LoginWidget extends StatefulWidget {
 }
 
 class _LoginWidgetState extends State<LoginWidget> {
+
+  TextEditingController _emailController = TextEditingController();
+  TextEditingController _passwordController = TextEditingController();
+
+
+  @override
+  void initState() {
+    _emailController.text = '';
+    _passwordController.text = '';
+  }
+
+  _setLocal(Locale locale) async {
+    await context.setLocale(locale);
+    // Restart.restartApp();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -89,7 +107,22 @@ class _LoginWidgetState extends State<LoginWidget> {
                       ),
                     )),
                 Container(
-                  child: TBButton(title: 'login.title'),
+                  child: TBButton(
+                    title: 'login.title',
+                    onTap: () async {
+                      final _newLocale = Locale('en', 'US');
+                      _setLocal(_newLocale);
+                    },
+                  ),
+                ),
+                Container(
+                  child: TBButton(
+                    title: 'login.title',
+                    onTap: () async {
+                      final _newLocale = Locale('vi', 'VN');
+                      _setLocal(_newLocale);
+                    },
+                  ),
                 ),
                 Container(
                   alignment: Alignment.center,

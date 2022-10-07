@@ -50,18 +50,16 @@ class TBTextField extends StatefulWidget {
 }
 
 class _TBTextFieldState extends State<TBTextField> {
-  late final controller = widget.controller ?? TextEditingController();
   bool _isPassword = false;
 
   @override
   void initState() {
-    controller.text = widget.initialText ?? controller.text;
     super.initState();
   }
 
   @override
   void dispose() {
-    controller.dispose();
+    widget.controller?.dispose();
     super.dispose();
   }
 

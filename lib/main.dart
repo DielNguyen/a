@@ -41,7 +41,9 @@ class MyApp extends StatelessWidget {
         child: MaterialApp(
             debugShowCheckedModeBanner: false,
             localizationsDelegates: context.localizationDelegates,
+            supportedLocales: context.supportedLocales,
             title: 'Posts App',
+            locale: context.locale,
             theme: appTheme,
             routes: AppRoutes.routes,
             initialRoute: R.loginPage,

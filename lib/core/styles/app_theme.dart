@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 const primaryColor = Color(0xff082659);
 const secondaryColor = Color(0xff51eec2);
 
 final appTheme = ThemeData(
   appBarTheme: const AppBarTheme(
+    systemOverlayStyle: SystemUiOverlayStyle(
+      statusBarColor: Colors.green,
+      statusBarIconBrightness: Brightness.light,
+      statusBarBrightness: Brightness.light,
+    ),
     backgroundColor: primaryColor,
     centerTitle: true,
   ),

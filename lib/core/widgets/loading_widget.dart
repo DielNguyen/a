@@ -1,4 +1,4 @@
-import 'package:a/core/app_theme.dart';
+import 'package:a/core/styles/app_theme.dart';
 import 'package:flutter/material.dart';
 
 class LoadingWidget extends StatelessWidget {
@@ -9,13 +9,7 @@ class LoadingWidget extends StatelessWidget {
     return const Padding(
       padding: EdgeInsets.symmetric(vertical: 20),
       child: Center(
-        child: SizedBox(
-          height: 40,
-          width: 40,
-          child: CircularProgressIndicator(
-            color: primaryColor,
-          ),
-        ),
+        child: Image(image: AssetImage('assets/images/background.png'), width: 40, height: 80,)
       ),
     );
   }

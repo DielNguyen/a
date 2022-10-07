@@ -1,4 +1,16 @@
 {
+  "common": {
+    "terms": "By Signing up you agree to our Terms Conditions & \nPrivacy Policy."
+  },
+  "login": {
+    "title": "Log In",
+    "content": "Enter your email or phone number and password for login in or,\ncreate new account?",
+    "hint_email_phone": "Your email or phone number",
+    "hint_password": "Your password"
+  },
+  "forgot_password": {
+    "text": "Forgot password?"
+  },
   "title": "Titles",
   "app_local_demo": "Application localization example!",
   "demo_details": "This is a sample project to change the language with a drop down menu of languages."

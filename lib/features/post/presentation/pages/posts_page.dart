@@ -28,15 +28,15 @@ class PostsPage extends StatelessWidget {
       padding: const EdgeInsets.all(10),
       child: BlocBuilder<PostsBloc, PostsState>(
         builder: (context, state) {
-          if (state is LoadingPostsState) {
-            return const LoadingWidget();
-          } else if (state is LoadedPostsState) {
-            return RefreshIndicator(
-                child: PostListWidget(posts: state.posts),
-                onRefresh: () => _onRefresh(context));
-          } else if (state is ErrorPostsState) {
-            return MessageDisplayWidget(message: state.message);
-          }
+          // if (state is LoadingPostsState) {
+          //   return const LoadingWidget();
+          // } else if (state is LoadedPostsState) {
+          //   return RefreshIndicator(
+          //       child: PostListWidget(posts: state.posts),
+          //       onRefresh: () => _onRefresh(context));
+          // } else if (state is ErrorPostsState) {
+          //   return MessageDisplayWidget(message: state.message);
+          // }
           return const LoadingWidget();
         },
       ),

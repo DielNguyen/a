@@ -1,4 +1,4 @@
-import 'package:a/core/app_theme.dart';
+import 'package:a/core/styles/app_theme.dart';
 import 'package:a/features/post/domain/entities/post_entiy.dart';
 import 'package:a/features/post/presentation/blocs/add_delete_update_posts/add_delete_update_posts_bloc.dart';
 import 'package:a/features/post/presentation/blocs/add_delete_update_posts/add_delete_update_posts_event.dart';

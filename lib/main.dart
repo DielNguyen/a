@@ -1,12 +1,14 @@
-import 'package:a/core/app_theme.dart';
+import 'package:a/core/styles/app_theme.dart';
 import 'package:a/features/post/presentation/blocs/add_delete_update_posts/add_delete_update_posts_bloc.dart';
 import 'package:a/features/post/presentation/blocs/posts/posts_bloc.dart';
 import 'package:a/features/post/presentation/blocs/posts/posts_event.dart';
-import 'package:a/features/post/presentation/pages/posts_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'injection_container.dart' as di;
 import 'package:easy_localization/easy_localization.dart';
+
+import 'routes/app_routes.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -17,7 +19,10 @@ Future<void> main() async {
         supportedLocales: [Locale('en', 'US'), Locale('vi', 'VN')],
         path: 'assets/translations',
         fallbackLocale: Locale('en', 'US'),
-        child: const MyApp()
+        child: ScreenUtilInit(
+          designSize: const Size(390, 844),
+          builder: (_, child) => const MyApp(),
+        )
     ),
   );
 }
@@ -38,7 +43,8 @@ class MyApp extends StatelessWidget {
             localizationsDelegates: context.localizationDelegates,
             title: 'Posts App',
             theme: appTheme,
-            home: PostsPage()
+            routes: AppRoutes.routes,
+            initialRoute: R.loginPage,
         )
     );
   }

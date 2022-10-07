@@ -1,5 +1,5 @@
 import 'dart:io';
-import 'package:a/core/app_theme.dart';
+import 'package:a/core/styles/app_theme.dart';
 import 'package:a/core/utils/snackbar_message.dart';
 import 'package:a/core/widgets/loading_widget.dart';
 import 'package:a/features/post/domain/entities/post_entiy.dart';

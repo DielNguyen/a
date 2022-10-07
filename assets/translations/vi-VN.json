@@ -1,5 +1,17 @@
 {
-  "title": "VN1",
-  "app_local_demo": "VN2",
-  "demo_details": "VN3"
+  "common": {
+    "terms": "By Signing up you agree to our Terms Conditions &\nPrivacy Policy."
+  },
+  "login": {
+    "title": "Đăng nhập",
+    "content": "Nhập email hoặc số điện thoại và mật khẩu để đăng nhập hoặc,\ntạo tài khoản mới?",
+    "hint_email_phone": "Your email or phone number",
+    "hint_password": "Your password"
+  },
+  "forgot_password": {
+    "text": "Forgot password?"
+  },
+  "title": "Titles",
+  "app_local_demo": "Application localization example!",
+  "demo_details": "This is a sample project to change the language with a drop down menu of languages."
 }
